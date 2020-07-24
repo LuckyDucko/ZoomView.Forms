@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<PackageVersion>0.0.1</PackageVersion>
+		<Authors>Tyson Hooker</Authors>
+		<NeutralLanguage>en-AU</NeutralLanguage>
+		<Description>Magnify in and out of any Visual Element in Xamarin Forms</Description>
+		<PackageId>ZoomView.Forms</PackageId>
+		<Owners>LuckyDucko</Owners>
+		<PackageProjectUrl>https://github.com/LuckyDucko/ZoomView.Forms</PackageProjectUrl>
+		<PackageTags>xamarin-forms custom-control zoomable xamarin</PackageTags>
+		<Title>ZoomView.Forms</Title>
+		<Summary>Zoomable View in Xamarin Forms</Summary>
+		<PackageReleaseNotes>Initial release</PackageReleaseNotes>
+		<PackOnBuild>true</PackOnBuild>
+	</PropertyGroup>
+	<PropertyGroup>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<RepositoryUrl>https://github.com/LuckyDucko/ZoomView.Forms</RepositoryUrl>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+		<LangVersion>latest</LangVersion>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<NoStdLib>false</NoStdLib>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+		<LangVersion>latest</LangVersion>
+		<DebugSymbols>true</DebugSymbols>
+		<DebugType>full</DebugType>
+		<CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<NoStdLib>false</NoStdLib>
+	</PropertyGroup>
+	<PropertyGroup>
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+	</PropertyGroup>
+	<ItemGroup>
+		<Compile Include="ZoomView.cs" />
+		<Compile Include="Properties\AssemblyInfo.cs" />
+	</ItemGroup>
+	<ItemGroup>
+	  <PackageReference Include="Xamarin.Forms" Version="4.7.0.1179" />
+	</ItemGroup>
+</Project>

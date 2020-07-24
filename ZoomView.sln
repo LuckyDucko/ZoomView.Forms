@@ -1,0 +1,29 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZoomView.Forms", "ZoomView\ZoomView.Forms.csproj", "{739770C9-10FC-4FB9-865D-E19FC7568374}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZoomView.Forms.iOS", "ZoomView.iOS\ZoomView.Forms.iOS.csproj", "{EB825EC4-785C-4A40-A551-99A14A158A79}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZoomView.Forms.Android", "ZoomView.Android\ZoomView.Forms.Android.csproj", "{686DCBF4-BDBF-4C44-A9AF-C994E60F4042}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{739770C9-10FC-4FB9-865D-E19FC7568374}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{739770C9-10FC-4FB9-865D-E19FC7568374}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{739770C9-10FC-4FB9-865D-E19FC7568374}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{739770C9-10FC-4FB9-865D-E19FC7568374}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB825EC4-785C-4A40-A551-99A14A158A79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB825EC4-785C-4A40-A551-99A14A158A79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB825EC4-785C-4A40-A551-99A14A158A79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB825EC4-785C-4A40-A551-99A14A158A79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{686DCBF4-BDBF-4C44-A9AF-C994E60F4042}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{686DCBF4-BDBF-4C44-A9AF-C994E60F4042}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{686DCBF4-BDBF-4C44-A9AF-C994E60F4042}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{686DCBF4-BDBF-4C44-A9AF-C994E60F4042}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
