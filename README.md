@@ -15,7 +15,7 @@
 ## Table of Contents
 
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/ae337590962b4e28955d14f745f93b13)](https://www.codacy.com/manual/LuckyDucko/ZoomView.Forms?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=LuckyDucko/ZoomView.Forms&amp;utm_campaign=Badge_Grade)
-[![nuget](https://img.shields.io/nuget/v/Plugin.NotificationService.svg)](https://www.nuget.org/packages/Plugin.NotificationService)
+[![nuget](https://img.shields.io/nuget/v/ZoomView.Forms.svg)](https://www.nuget.org/packages/ZoomView.Forms)
 
 * [Getting Started](#getting-started)
   * [Installation](#installation)
