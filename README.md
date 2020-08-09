@@ -87,10 +87,11 @@ here is an example view that i created
 		</StackLayout>
 	</ZoomView:ZoomView>
 ```
-And the result
+**Result:**
 
-![iOS Gif Example](https://j.gifs.com/ZYQEoJ.gif)
-![Android Gif Example](https://j.gifs.com/vl46zm.gif)
+
+![iOS Gif Example](https://j.gifs.com/q74W92.gif)
+![Android Gif Example](https://j.gifs.com/oV4WPj.gif)
 
 
 <!-- LICENSE -->
