@@ -16,13 +16,12 @@
 		<Summary>Make any view Zoomable in your App, with scaled touch gestures included!</Summary>
 		<PackageTags>xamarin, android, xamarin.forms, ios, zoom, scale, zoomable view, view</PackageTags>
 		<Title>Zoomable View for Xamarin Forms</Title>
-		<Description>
-			Custom control for your Xamarin.Forms project, wrap any view within a zoomview and pan in and out to see it in action
-		</Description>
+		<Description>Custom control for your Xamarin.Forms project, 
+wrap any view within a zoomview and pan in and out to see it in action</Description>
 		<Copyright>Copyright 2020</Copyright>
 		<RepositoryUrl>https://github.com/LuckyDucko/ZoomView.Forms</RepositoryUrl>
-		<PackageReleaseNotes>
-		</PackageReleaseNotes>
+		<PackageReleaseNotes>Initial release. 
+Tested working as the top level view, unsure of its viability within other views. </PackageReleaseNotes>
 		<NeutralLanguage>en-AU</NeutralLanguage>
 		<LangVersion>default</LangVersion>
 		<EnableDefaultCompileItems>false</EnableDefaultCompileItems>
@@ -31,6 +30,7 @@
 		<DefineConstants>$(DefineConstants);</DefineConstants>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageVersion>1.0.0</PackageVersion>
 	</PropertyGroup>
 	<PropertyGroup Condition=" '$(Configuration)'=='Debug' ">
 		<DebugSymbols>true</DebugSymbols>
