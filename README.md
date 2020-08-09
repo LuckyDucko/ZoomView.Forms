@@ -14,7 +14,7 @@
 
 ## Table of Contents
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/70a060f27ea14114a6b0ee3ccc9badcd)](https://app.codacy.com/manual/LuckyDucko/NotificationService?utm_source=github.com&utm_medium=referral&utm_content=LuckyDucko/NotificationService&utm_campaign=Badge_Grade_Dashboard)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/ae337590962b4e28955d14f745f93b13)](https://www.codacy.com/manual/LuckyDucko/ZoomView.Forms?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=LuckyDucko/ZoomView.Forms&amp;utm_campaign=Badge_Grade)
 [![nuget](https://img.shields.io/nuget/v/Plugin.NotificationService.svg)](https://www.nuget.org/packages/Plugin.NotificationService)
 
 * [Getting Started](#getting-started)
