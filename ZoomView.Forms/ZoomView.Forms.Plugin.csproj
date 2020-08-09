@@ -41,9 +41,9 @@ Tested working as the top level view, unsure of its viability within other views
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 	</PropertyGroup>
 	<ItemGroup>
-		<PackageReference Include="Xamarin.Forms" Version="4.8.0.1269" />
 		<Compile Include="*.shared.cs" />
 		<PackageReference Include="NETStandard.Library" Version="2.0.3" />
+		<PackageReference Include="Xamarin.Forms" Version="4.5.0.356" />
 	</ItemGroup>
 	<ItemGroup>
 		<Compile Include="**\*.shared.cs" />
