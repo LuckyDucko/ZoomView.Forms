@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="MSBuild.Sdk.Extras/2.0.54">
+	<PropertyGroup>
+		<TargetFrameworks>netstandard1.0;netstandard2.0;Xamarin.iOS10;MonoAndroid90</TargetFrameworks>
+		<AssemblyName>ZoomView.Forms.Plugin</AssemblyName>
+		<RootNamespace>ZoomView.Forms.Plugin</RootNamespace>
+		<Product>$(AssemblyName) ($(TargetFramework))</Product>
+		<AssemblyVersion>1.0.0.0</AssemblyVersion>
+		<AssemblyFileVersion>1.0.0.0</AssemblyFileVersion>
+		<Version>1.0.0.0</Version>
+		<Authors>Tyson Hooker</Authors>
+		<PackageId>ZoomView.Forms</PackageId>
+		<PackOnBuild>true</PackOnBuild>
+		<Owners>LuckyDucko</Owners>
+		<PackageProjectUrl>https://github.com/LuckyDucko/ZoomView.Forms</PackageProjectUrl>
+		<Summary>Make any view Zoomable in your App, with scaled touch gestures included!</Summary>
+		<PackageTags>xamarin, android, xamarin.forms, ios, zoom, scale, zoomable view, view</PackageTags>
+		<Title>Zoomable View for Xamarin Forms</Title>
+		<Description>
+			Custom control for your Xamarin.Forms project, wrap any view within a zoomview and pan in and out to see it in action
+		</Description>
+		<Copyright>Copyright 2020</Copyright>
+		<RepositoryUrl>https://github.com/LuckyDucko/ZoomView.Forms</RepositoryUrl>
+		<PackageReleaseNotes>
+		</PackageReleaseNotes>
+		<NeutralLanguage>en-AU</NeutralLanguage>
+		<LangVersion>default</LangVersion>
+		<EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+		<GenerateDocumentationFile Condition=" '$(Configuration)' == 'Release' ">true</GenerateDocumentationFile>
+		<DebugType>full</DebugType>
+		<DefineConstants>$(DefineConstants);</DefineConstants>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)'=='Debug' ">
+		<DebugSymbols>true</DebugSymbols>
+		<GenerateDocumentationFile>false</GenerateDocumentationFile>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)'=='Release' ">
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Xamarin.Forms" Version="4.8.0.1269" />
+		<Compile Include="*.shared.cs" />
+		<PackageReference Include="NETStandard.Library" Version="2.0.3" />
+	</ItemGroup>
+	<ItemGroup>
+		<Compile Include="**\*.shared.cs" />
+	</ItemGroup>
+	<ItemGroup Condition=" $(TargetFramework.StartsWith('netstandard')) ">
+	</ItemGroup>
+	<ItemGroup Condition=" $(TargetFramework.StartsWith('MonoAndroid')) ">
+		<Compile Include="**\*.android.cs" />
+	</ItemGroup>
+	<ItemGroup Condition=" $(TargetFramework.StartsWith('Xamarin.iOS')) ">
+		<Compile Include="**\*.apple.cs" />
+	</ItemGroup>
+	<ItemGroup>
+		<EmbeddedResource Remove="ZoomViewExample\MainPage.xaml" />
+	</ItemGroup>
+	<PropertyGroup>
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+	</PropertyGroup>
+</Project>
