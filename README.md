@@ -9,7 +9,6 @@
 </p>
 
 
-
 <!-- TABLE OF CONTENTS -->
 
 ## Table of Contents
@@ -107,7 +106,6 @@ or reach me on the [Xamarin Slack](https://xamarinchat.herokuapp.com/),
 or on my [E-mail](tyson@logchecker.com.au)
 
 Project Link: [ZoomView.Forms](https://github.com/LuckyDucko/ZoomView.Forms)
-
 
 
 <!-- ACKNOWLEDGEMENTS -->
