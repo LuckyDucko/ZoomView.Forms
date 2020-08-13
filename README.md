@@ -3,7 +3,7 @@
 <p align="center">
   <h1 align="center">ZoomView.Forms</h3>
   <p align="center">
-  Quickly add a zoomable wrapper to any XAML layout
+  Quickly add a zoomable wrapper to any VisualElement
     <br />
   </p>
 </p>
