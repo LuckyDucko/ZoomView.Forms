@@ -1,5 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
+using System.Linq;
+using System.Reflection;
+using System.Runtime.CompilerServices;
 
 using Xamarin.Forms;
 
@@ -11,83 +15,41 @@ namespace ZoomView.Forms
 	public class ZoomView : ScrollView, INotifyPropertyChanged
 	{
 
-		/// <summary>
-		/// Max Scale of ZoomView
-		/// </summary>
-		public float MaxZoomScale
-		{
-			get => (float)GetValue(MaxZoomScaleProperty);
-			set => SetValue(MaxZoomScaleProperty, value);
-		}
+		public delegate void ResetZoomScaleDelegate();
+		public ResetZoomScaleDelegate ResetZoomScale;
 
 		/// <summary>
-		/// Minimum Scale of ZoomView
+		/// Overridden version, to reset zoom scale so errors dont arise
 		/// </summary>
-		public float MinimumZoomScale
+		public new bool InputTransparent
 		{
-			get => (float)GetValue(MinimumZoomScaleProperty);
-			set => SetValue(MinimumZoomScaleProperty, value);
-		}
-
-
-		/// <summary>
-		/// Current Scale of ZoomView
-		/// </summary>
-		public float CurrentZoomScale
-		{
-			get => (float)GetValue(CurrentZoomScaleProperty);
-			set => SetValue(CurrentZoomScaleProperty, BoundsRestrictedZoomScaling(value));
-		}
-
-
-		private float BoundsRestrictedZoomScaling(float newZoomScale)
-		{
-			if (newZoomScale > MaxZoomScale)
+			get => (bool)GetValue(InputTransparentProperty);
+			set
 			{
-				return MaxZoomScale;
-			}
-			else if (newZoomScale < MinimumZoomScale)
-			{
-				return MinimumZoomScale;
-			}
-			else
-			{
-				return newZoomScale;
+				ResetZoomScale();
+				SetValue(InputTransparentProperty, value);
 			}
 		}
 
-		/// <summary>
-		/// Max Scale Property of ZoomView 
-		/// </summary>
-		public static readonly BindableProperty MaxZoomScaleProperty =
-		  BindableProperty.Create(propertyName: nameof(MaxZoomScale),
-			  returnType: typeof(float),
-			  declaringType: typeof(ZoomView),
-			  defaultValue: 10F);
 
+		public bool AllowEasyZoomInteraction
+		{
+			get => (bool)GetValue(AllowEasyZoomInteractionProperty);
+			set
+			{
+				this.Content.InputTransparent = value;
+			}
+		}
 
+		public static readonly BindableProperty AllowEasyZoomInteractionProperty =
+		BindableProperty.Create(propertyName: nameof(AllowEasyZoomInteraction),
+		  returnType: typeof(bool),
+		  declaringType: typeof(ZoomView),
+		  defaultValue: true);
 
-		/// <summary>
-		/// Minimum Scale Property of ZoomView 
-		/// </summary>
-		public static readonly BindableProperty MinimumZoomScaleProperty =
-			BindableProperty.Create(propertyName: nameof(MinimumZoomScale),
-			  returnType: typeof(float),
-			  declaringType: typeof(ZoomView),
-			  defaultValue: 0.5F);
-
-
-
-		/// <summary>
-		/// Current Scale property of ZoomView
-		/// </summary>
-		public static readonly BindableProperty CurrentZoomScaleProperty =
-			BindableProperty.Create(propertyName: nameof(CurrentZoomScale),
-			  returnType: typeof(float),
-			  declaringType: typeof(ZoomView),
-			  defaultValue: 1F);
-
-
-
+		public ZoomView()
+		{
+		}
 	}
+
 }

@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ZoomViewExample.MyPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:sh="clr-namespace:Sharpnado.Shades;assembly=Sharpnado.Shadows"
+    xmlns:z="clr-namespace:ZoomView.Forms;assembly=ZoomView.Forms.Plugin"
+    Title="fdss">
+	<ContentPage.ToolbarItems>
+		<ToolbarItem Clicked="ToolbarItem_Clicked" Text="On" />
+		<ToolbarItem Clicked="ToolbarItem_Clicked_1" Text="Off" />
+	</ContentPage.ToolbarItems>
+	<ContentPage.Content>
+		<z:ZoomView
+            x:Name="griddle"
+            BackgroundColor="AliceBlue"
+            IsClippedToBounds="True">
+			<Grid
+                Margin="0"
+                Padding="0"
+                BackgroundColor="Red"
+                IsClippedToBounds="true"
+                RowSpacing="0">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="50*" />
+					<ColumnDefinition Width="50*" />
+				</Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="20*" />
+					<RowDefinition Height="20*" />
+					<RowDefinition Height="20*" />
+					<RowDefinition Height="20*" />
+					<RowDefinition Height="20*" />
+				</Grid.RowDefinitions>
+				<sh:Shadows
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Margin="10"
+                    IsClippedToBounds="False">
+					<sh:Shadows.Shades>
+						<sh:ImmutableShades>
+							<sh:Shade
+                                BlurRadius="10"
+                                Opacity="0.1"
+                                Offset="-6,-6"
+                                Color="#6f6f6f" />
+							<sh:Shade
+                                BlurRadius="5"
+                                Opacity="0.75"
+                                Offset="4, 4"
+                                Color="Gray" />
+						</sh:ImmutableShades>
+					</sh:Shadows.Shades>
+					<Entry Keyboard="Numeric" Placeholder="Number Reading" />
+				</sh:Shadows>
+				<sh:Shadows
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Margin="10"
+                    IsClippedToBounds="False">
+					<sh:Shadows.Shades>
+						<sh:ImmutableShades>
+							<sh:Shade
+                                BlurRadius="10"
+                                Opacity="0.1"
+                                Offset="-6,-6"
+                                Color="#6f6f6f" />
+							<sh:Shade
+                                BlurRadius="5"
+                                Opacity="0.75"
+                                Offset="4, 4" />
+						</sh:ImmutableShades>
+					</sh:Shadows.Shades>
+					<Entry Placeholder="Comment" />
+				</sh:Shadows>
+				<sh:Shadows
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Margin="10"
+                    IsClippedToBounds="False">
+					<sh:Shadows.Shades>
+						<sh:ImmutableShades>
+							<sh:Shade
+                                BlurRadius="10"
+                                Opacity="0.1"
+                                Offset="-6,-6"
+                                Color="#6f6f6f" />
+							<sh:Shade
+                                BlurRadius="5"
+                                Opacity="0.75"
+                                Offset="4, 4"
+                                Color="Gray" />
+						</sh:ImmutableShades>
+					</sh:Shadows.Shades>
+					<Entry Placeholder="Place" />
+				</sh:Shadows>
+				<sh:Shadows
+                    Grid.Row="3"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Margin="10"
+                    IsClippedToBounds="False">
+					<sh:Shadows.Shades>
+						<sh:ImmutableShades>
+							<sh:Shade
+                                BlurRadius="10"
+                                Opacity="0.1"
+                                Offset="-6,-6"
+                                Color="#6f6f6f" />
+							<sh:Shade
+                                BlurRadius="5"
+                                Opacity="0.75"
+                                Offset="4, 4"
+                                Color="Gray" />
+						</sh:ImmutableShades>
+					</sh:Shadows.Shades>
+					<Label
+                        Padding="5"
+                        BackgroundColor="WhiteSmoke"
+                        HorizontalTextAlignment="Start"
+                        VerticalTextAlignment="Center" />
+				</sh:Shadows>
+				<sh:Shadows
+                    Grid.Row="4"
+                    Grid.Column="0"
+                    Margin="10"
+                    Padding="0"
+                    IsClippedToBounds="False">
+					<sh:Shadows.Shades>
+						<sh:ImmutableShades>
+							<sh:Shade
+                                BlurRadius="10"
+                                Opacity="0.1"
+                                Offset="-6,-6"
+                                Color="#6f6f6f" />
+							<sh:Shade
+                                BlurRadius="5"
+                                Opacity="0.75"
+                                Offset="4, 4"
+                                Color="Gray" />
+						</sh:ImmutableShades>
+					</sh:Shadows.Shades>
+					<Button
+                        Padding="0"
+                        BackgroundColor="#E89588"
+                        Clicked="ToolbarItem_Clicked_1"
+                        CornerRadius="5"
+                        FontSize="Small"
+                        Text="Disable Easy Zoom"
+                        TextColor="Red" />
+				</sh:Shadows>
+				<sh:Shadows
+                    Grid.Row="4"
+                    Grid.Column="1"
+                    Margin="10"
+                    IsClippedToBounds="False">
+					<sh:Shadows.Shades>
+						<sh:ImmutableShades>
+							<sh:Shade
+                                BlurRadius="10"
+                                Opacity="0.1"
+                                Offset="-6,-6"
+                                Color="#6f6f6f" />
+							<sh:Shade
+                                BlurRadius="5"
+                                Opacity="0.75"
+                                Offset="4, 4"
+                                Color="Gray" />
+						</sh:ImmutableShades>
+					</sh:Shadows.Shades>
+					<Button
+                        Padding="0"
+                        BackgroundColor="#C8F4DB"
+                        Clicked="ToolbarItem_Clicked"
+                        CornerRadius="5"
+                        FontSize="Small"
+                        Text="Enable Easy Zoom"
+                        TextColor="Green" />
+				</sh:Shadows>
+			</Grid>
+		</z:ZoomView>
+	</ContentPage.Content>
+</ContentPage>

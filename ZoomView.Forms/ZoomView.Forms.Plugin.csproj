@@ -14,14 +14,18 @@
 		<Owners>LuckyDucko</Owners>
 		<PackageProjectUrl>https://github.com/LuckyDucko/ZoomView.Forms</PackageProjectUrl>
 		<Summary>Make any view Zoomable in your App, with scaled touch gestures included!</Summary>
-		<PackageTags>xamarin, android, xamarin.forms, ios, zoom, scale, zoomable view, view</PackageTags>
+		<PackageTags>xamarin, android, xamarin.forms, ios, zoom, scale, zoomable view, view, scrollview, picture zoom, pan</PackageTags>
 		<Title>Zoomable View for Xamarin Forms</Title>
 		<Description>Custom control for your Xamarin.Forms project, 
 wrap any view within a zoomview and pan in and out to see it in action</Description>
-		<Copyright>Copyright 2020</Copyright>
+		<Copyright>Copyright 2021</Copyright>
 		<RepositoryUrl>https://github.com/LuckyDucko/ZoomView.Forms</RepositoryUrl>
-		<PackageReleaseNotes>Initial release. 
-Tested working as the top level view, unsure of its viability within other views. </PackageReleaseNotes>
+		<PackageReleaseNotes>New and improved.
+
+Remove Any min/max zooming as they didn't work anyway.
+Added in the ability to turn off the content for an easy zoom, the cost being it turns off input for anything within. 
+
+</PackageReleaseNotes>
 		<NeutralLanguage>en-AU</NeutralLanguage>
 		<LangVersion>default</LangVersion>
 		<EnableDefaultCompileItems>false</EnableDefaultCompileItems>
@@ -30,7 +34,7 @@ Tested working as the top level view, unsure of its viability within other views
 		<DefineConstants>$(DefineConstants);</DefineConstants>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<PackageVersion>1.0.0</PackageVersion>
+		<PackageVersion>2.0.0</PackageVersion>
 	</PropertyGroup>
 	<PropertyGroup Condition=" '$(Configuration)'=='Debug' ">
 		<DebugSymbols>true</DebugSymbols>
