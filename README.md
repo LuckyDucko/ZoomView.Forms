@@ -43,6 +43,10 @@ then all you need is
 </ZoomView:ZoomView>
 ```
 
+## Version 2.0.0
+
+In Version 2.0.0, there is a new `AllowEasyZoomInteraction` property thats part of the ZoomView. This property makes Zooming far easier within the ZoomView, however, it also disables interaction of the Content within the ZoomView. 
+
 ### Installation
 Ensure that ZoomView.Forms is added to all projects, shared and Android/iOS
 
