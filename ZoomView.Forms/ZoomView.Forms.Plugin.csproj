@@ -20,12 +20,9 @@
 wrap any view within a zoomview and pan in and out to see it in action</Description>
 		<Copyright>Copyright 2021</Copyright>
 		<RepositoryUrl>https://github.com/LuckyDucko/ZoomView.Forms</RepositoryUrl>
-		<PackageReleaseNotes>New and improved.
+		<PackageReleaseNotes>AllowEasyZoomInteraction has been renamed to UserInteractionEnabled to better reflect its intention
 
-Remove Any min/max zooming as they didn't work anyway.
-Added in the ability to turn off the content for an easy zoom, the cost being it turns off input for anything within. 
-
-</PackageReleaseNotes>
+iOS UserInteractionEnabled has been fixed and working now.</PackageReleaseNotes>
 		<NeutralLanguage>en-AU</NeutralLanguage>
 		<LangVersion>default</LangVersion>
 		<EnableDefaultCompileItems>false</EnableDefaultCompileItems>
@@ -34,7 +31,8 @@ Added in the ability to turn off the content for an easy zoom, the cost being it
 		<DefineConstants>$(DefineConstants);</DefineConstants>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<PackageVersion>2.0.0</PackageVersion>
+		<PackageVersion>2.1.0</PackageVersion>
+		<ReleaseVersion>0.2</ReleaseVersion>
 	</PropertyGroup>
 	<PropertyGroup Condition=" '$(Configuration)'=='Debug' ">
 		<DebugSymbols>true</DebugSymbols>

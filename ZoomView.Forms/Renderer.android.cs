@@ -1,15 +1,16 @@
-using Android.Views;
+
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 using Android.Graphics;
 using System;
 using Android.Content;
 using static Android.Views.ScaleGestureDetector;
-using ZoomView.Forms.Android;
+using ZoomView.Forms.Droid;
 using Android.Runtime;
+using Android.Views;
 
 [assembly: ExportRenderer(typeof(ZoomView.Forms.ZoomView), typeof(ZoomViewRenderer))]
-namespace ZoomView.Forms.Android
+namespace ZoomView.Forms.Droid
 {
 	[Preserve(AllMembers = true)]
 	public class ZoomViewRenderer : ScrollViewRenderer, IOnScaleGestureListener

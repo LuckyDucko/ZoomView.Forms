@@ -28,7 +28,8 @@ namespace ZoomView.Forms.iOS
 		{
 			MaximumZoomScale = 10f;
 			MinimumZoomScale = 0.5f;
-			EnsureResetZoomeScaleIsConnected(ref e);
+			EnsureResetZoomScaleIsConnected(ref e);
+			EnsureSetChildInputTransparentIsConnected(ref e);
 			base.OnElementChanged(e);
 			base.SetNeedsDisplay();
 		}
@@ -59,7 +60,21 @@ namespace ZoomView.Forms.iOS
 			this.ContentInset = new UIEdgeInsets(offsetY, offsetX, 0, 0);
 		}
 
-		private void EnsureResetZoomeScaleIsConnected(ref VisualElementChangedEventArgs e)
+		private void EnsureSetChildInputTransparentIsConnected(ref VisualElementChangedEventArgs e)
+		{
+			var zoomViewElement = (ZoomView)e.NewElement;
+			ChildInputTransparent(zoomViewElement.UserInteractionEnabled);
+			if (e.NewElement != null)
+			{
+				zoomViewElement.setChildInputTransparent += ChildInputTransparent;
+			}
+			if (e.OldElement != null)
+			{
+				zoomViewElement.setChildInputTransparent -= ChildInputTransparent;
+			}
+		}
+
+		private void EnsureResetZoomScaleIsConnected(ref VisualElementChangedEventArgs e)
 		{
 
 			if (e.NewElement != null)
@@ -71,6 +86,14 @@ namespace ZoomView.Forms.iOS
 			{
 				var zoomViewElement = (ZoomView)e.OldElement;
 				zoomViewElement.ResetZoomScale -= ResetZoomScale;
+			}
+		}
+
+		void ChildInputTransparent(bool userInteractionLevel)
+		{
+			foreach (var childView in this.Subviews)
+			{
+				childView.UserInteractionEnabled = userInteractionLevel;
 			}
 		}
 

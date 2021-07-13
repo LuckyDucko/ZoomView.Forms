@@ -18,6 +18,9 @@ namespace ZoomView.Forms
 		public delegate void ResetZoomScaleDelegate();
 		public ResetZoomScaleDelegate ResetZoomScale;
 
+		public delegate void SetChildInputTransparentDelegate(bool userInteractionLevel);
+		public SetChildInputTransparentDelegate setChildInputTransparent;
+
 		/// <summary>
 		/// Overridden version, to reset zoom scale so errors dont arise
 		/// </summary>
@@ -32,20 +35,33 @@ namespace ZoomView.Forms
 		}
 
 
-		public bool AllowEasyZoomInteraction
+		public bool UserInteractionEnabled
 		{
-			get => (bool)GetValue(AllowEasyZoomInteractionProperty);
+			get => (bool)GetValue(UserInteractionEnabledProperty);
 			set
 			{
-				this.Content.InputTransparent = value;
+				SetValue(UserInteractionEnabledProperty, value);
+				setChildInputTransparent(value);
 			}
 		}
 
-		public static readonly BindableProperty AllowEasyZoomInteractionProperty =
-		BindableProperty.Create(propertyName: nameof(AllowEasyZoomInteraction),
+		private static void OnUserInteractionPropertyChanged(BindableObject bindable, object oldVal, object newVal)
+		{
+			var zoomview = bindable as ZoomView;
+			bool newValResult;
+			if (bool.TryParse(newVal.ToString(), out newValResult))
+			{
+				zoomview.Content.InputTransparent = newValResult;
+			}
+		}
+
+		public static readonly BindableProperty UserInteractionEnabledProperty =
+		BindableProperty.Create(propertyName: nameof(UserInteractionEnabled),
 		  returnType: typeof(bool),
 		  declaringType: typeof(ZoomView),
-		  defaultValue: true);
+		  defaultValue: true,
+		  propertyChanged: OnUserInteractionPropertyChanged
+		  );
 
 		public ZoomView()
 		{
